@@ -1,0 +1,25 @@
+﻿<div>
+    <h3>Login</h3>
+</div>
+<div>
+    <form class="form" novalidate name="loginForm">
+        <!--<div>
+            <a uib-tooltip="Hello World">Tooltip</a>
+            <a href="javascript:void(0)" uib-popover="Hello World" popover-trigger="click">Popover</a>
+        </div>-->
+        <div class="form-group">
+            <p ng-show="vm.isAuthorized" style="color:red;">email id or password does not match.</p>            
+            <div>
+                <input type="email" name="emailAddress" class="form-control" id="email" ng-model="vm.credentials.email" placeholder="email" style="display:inline-block; width:40%;margin-bottom:5px;" required/>
+                <div class="validation-error" ng-show="loginForm.emailAddress.$invalid && loginForm.$submitted">
+                    Please enter a valid email
+                </div>
+            </div>
+            <input type="password" name="password" class="form-control" id="password" ng-model="vm.credentials.password" placeholder="Password" style="margin-bottom:5px;" />            
+
+
+            <button type="submit" class="btn btn-default" ng-click="vm.login(loginForm)">Submit</button>
+        </div>
+    </form>
+</div>
+    

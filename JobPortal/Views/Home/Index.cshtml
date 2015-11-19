@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/ui-bootstrap-tpls-0.14.3.js"></script>
+
+    <div class="jumbotron" style="background-color:whitesmoke;">
+        <div ng-app="jobPortalModule">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid"></div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#jobPortal-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Job Portal</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/Home">Job Portal</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="jobPortal-navbar-collapse-1" ng-controller="HeaderController as vm">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{ active: vm.isActive('/Dashboard')}">
+                            <a href="#/Dashboard">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="dropdown" ng-class="{ active: vm.isActive('/Manage')}">
+                            <a href="#/Manage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">Manage<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li ng-class="{ active: vm.isActive('/Consultants')}"><a href="#/Consultants">Consultants</a></li>
+                                <li ng-class="{ active: vm.isActive('/Positions')}"><a href="#/Positions">Positions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-class="{ active: vm.isActive('/')}">
+                            <a href="#/">Login</a>
+                        </li>
+
+                        <li ng-class="{ active: vm.isActive('/Register')}">
+                            <a href="#/Register">Register</a>
+                        </li>
+                        <li ng-class="{ active: vm.isActive('/AccountSettings')}">
+                            <a href="#/AccountSettings"><span class="glyphicon glyphicon-cog pull-left"></span></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+            <div ng-view></div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/angularCore")
+    @Scripts.Render("~/bundles/bootstrap")
+
