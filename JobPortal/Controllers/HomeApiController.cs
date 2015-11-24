@@ -17,7 +17,7 @@ namespace JobPortal.Controllers
             var user = new UserContext().Users.FirstOrDefault(x => x.EmailAddress == userDetails.EmailAddress && x.Password == userDetails.Password);
             if (user != null)
             {
-                return new User
+                return new User 
                 {
                     UserId = user.UserId,
                     FirstName = user.FirstName,
