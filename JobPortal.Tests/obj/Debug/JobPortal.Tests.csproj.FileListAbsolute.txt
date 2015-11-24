@@ -48,3 +48,13 @@ C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.WebPages.De
 C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Workspace\Websites\JobPortal\JobPortal.Tests\obj\Debug\JobPortal.Tests.pdb
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\EntityFramework.dll
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.Http.dll
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\EntityFramework.xml
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.Http.xml
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Workspace\Websites\JobPortal\JobPortal.Tests\bin\Debug\System.Net.Http.Formatting.xml

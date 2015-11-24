@@ -9,7 +9,7 @@
         vm.register = function (form) {
             if (form.$invalid)
                 return;
-            var res = registrationService.isRegistered(form);
+            var res = registrationService.registerUser(vm.credentials);
             if (res) {
                 $location.path('/Dashboard');
             }            

@@ -8,13 +8,15 @@
         vm.login = function(form) {
             if (form.$invalid)
                 return;
-            var res = authenticationService.isAuthorized(vm.credentials);
+            authenticationService.isAuthorized(vm.credentials).then(function(res){
                 if (res) {
                     $location.path('/Dashboard');
                 }
                 else {
                     vm.isAuthorized = false;
                 }
+            });
+                
 
         }       
     }

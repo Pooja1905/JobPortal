@@ -2,8 +2,8 @@
 
     angular.module('jobPortalModule').controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['authenticationService', '$location', '$routeParams', 'userInformation'];
-    function DashboardController(authenticationService, $location, $routeParams, userInformation) {
+    DashboardController.$inject = ['authenticationService', '$location', '$routeParams'];
+    function DashboardController(authenticationService, $location, $routeParams) {
         var vm = this;
         debugger;
         vm.user = "Pooja";

@@ -10,7 +10,7 @@
         <div class="form-group">
             <p ng-show="vm.isAuthorized" style="color:red;">email id or password does not match.</p>            
             <div>
-                <input type="email" name="emailAddress" class="form-control" id="email" ng-model="vm.credentials.email" placeholder="email" style="display:inline-block; width:40%;margin-bottom:5px;" required/>
+                <input type="email" name="emailAddress" class="form-control" id="email" ng-model="vm.credentials.emailAddress" placeholder="email" style="display:inline-block; width:40%;margin-bottom:5px;" required/>
                 <div class="validation-error" ng-show="loginForm.emailAddress.$invalid && loginForm.$submitted">
                     Please enter a valid email
                 </div>

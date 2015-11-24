@@ -7,13 +7,13 @@
       templateUrl: 'app/Login/Views/Login.html',
       controller: 'LoginController',
       controllerAs: 'vm'
-    }).when('/Dashboard', {
-        templateUrl: 'app/Dashboard/Views/Dashboard.html',
-        controller:'DashboardController',
-        controllerAs:'vm'
     }).when('/Register', {
         templateUrl: 'app/Register/Views/Register.html',
         controller: 'RegistrationController',
+        controllerAs: 'vm'
+    }).when('/Dashboard', {
+        templateUrl: 'app/Dashboard/Views/Dashboard.html',
+        controller: 'DashboardController',
         controllerAs: 'vm'
     }).when('/Dashboard/:id', {
         templateUrl: 'app/Dashboard/Views/Dashboard.html',

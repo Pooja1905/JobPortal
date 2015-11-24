@@ -64,3 +64,13 @@ C:\Workspace\Websites\JobPortal\JobPortal\bin\Newtonsoft.Json.xml
 C:\Workspace\Websites\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache
 C:\Workspace\Websites\JobPortal\JobPortal\obj\Debug\JobPortal.dll
 C:\Workspace\Websites\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+C:\Workspace\Websites\JobPortal\JobPortal\bin\EntityFramework.dll
+C:\Workspace\Websites\JobPortal\JobPortal\bin\EntityFramework.SqlServer.dll
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Net.Http.Formatting.dll
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Web.Http.dll
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Web.Http.WebHost.dll
+C:\Workspace\Websites\JobPortal\JobPortal\bin\EntityFramework.xml
+C:\Workspace\Websites\JobPortal\JobPortal\bin\EntityFramework.SqlServer.xml
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Net.Http.Formatting.xml
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Web.Http.xml
+C:\Workspace\Websites\JobPortal\JobPortal\bin\System.Web.Http.WebHost.xml

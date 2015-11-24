@@ -1,11 +1,19 @@
 ﻿(function () {
+   
+    angular.module('jobPortalModule').factory( 'authenticationService', authenticationService);
 
-    angular.module('jobPortalModule').factory('authenticationService', authenticationService);
-    function authenticationService() {
+    authenticationService.$inject = ['$http'];
+    function authenticationService($http) {
         var isLoginAuthorized;//= false;
-        var isAuthorized = function (credentials) {
-            isLoginAuthorized = credentials.email != "" && credentials.password == "admin" ? true : false;
-            return isLoginAuthorized;
+        var isAuthorized = function(credentials) {
+            return $http({
+                method: 'POST',
+                url: 'api/HomeApi/AuthorizeUser',
+                data: credentials
+            }).then(function (response) {
+                isLoginAuthorized = response.data.EmailAddress ? true : false;
+                return isLoginAuthorized;
+            });
         };
         return {
             isAuthorized: isAuthorized,

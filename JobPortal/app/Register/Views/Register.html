@@ -4,25 +4,22 @@
 <form class="form" novalidate name="registrationForm">
     <div class="form-group">
         <div>
-            <input type="text" name="firstName" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="firstName" placeholder="Firstname" required />
+            <input type="text" name="firstName" ng-model="vm.credentials.firstName" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="firstName" placeholder="Firstname" required />
         </div>
-        <div>
-            <input type="text" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="middleName" placeholder="Middlename" />
-        </div>
-        <div><input type="text" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="lastName" placeholder="Lastname" /></div>
+        <div><input type="text" class="form-control" ng-model="vm.credentials.lastName" style="display:inline-block; width:40%;margin-bottom:5px;" id="lastName" placeholder="Lastname" /></div>
        
         <div>
-            <input type="email" name="emailAddress" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="email" placeholder="email" required />
+            <input type="email" name="emailAddress" ng-model="vm.credentials.emailAddress" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="email" placeholder="email" required />
             <div class="validation-error" ng-show="registrationForm.emailAddress.$invalid && registrationForm.$submitted">
                 Please enter a valid email
             </div>
         </div>
         <div>
-            <input type="password" name="password" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="password" placeholder="Password" required />
+            <input type="password" name="password" class="form-control" ng-model="vm.credentials.password" style="display:inline-block; width:40%;margin-bottom:5px;" id="password" placeholder="Password" required />
         </div>
         <div>
-            <input type="password" name="confirmPassword" class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="confirmPassword" placeholder="Confirm Password" required />
+            <input type="password" name="confirmPassword"   class="form-control" style="display:inline-block; width:40%;margin-bottom:5px;" id="confirmPassword" placeholder="Confirm Password" required />
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" ng-click="vm.register(vm.credentials)">Submit</button>
     </div>
 </form>
