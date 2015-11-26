@@ -1,4 +1,7 @@
-﻿using System;
+﻿using JobPortal.Api.Controllers.Base;
+using JobPortal.Business;
+using JobPortal.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -8,45 +11,43 @@ using System.Web.Http;
 namespace JobPortal.Api.Controllers
 {
     [RoutePrefix("account")]
-    public class AccountController : ApiController
+    public class AccountController : BaseApiController<AccountBusiness>
     {
-        public List<int> Accounts
-        {
-            get
-            {
-                return new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
-            }
-            set{
-
-            }
-        }
-
         [Route("{userId}")]
         [HttpGet]
         public IHttpActionResult GetUser(int userId)
         {
-            return null;
+            return Ok(Business.GetUser(userId));
         }
 
         [Route("")]
         [HttpPost]
-        public IHttpActionResult AddAccount(int accountInfo)
+        public IHttpActionResult AddAccount(User user)
         {
-            Accounts.Add(accountInfo);
-            return Ok(accountInfo);
+            Business.AddUser(user);
+            return Ok(user.UserId);
         }
 
         [Route("")]
         [HttpPut]
-        public IHttpActionResult UpdateAccount(int newAccountId)
+        public IHttpActionResult UpdateAccount(User user)
         {
-            return Ok();
+            Business.UpdateUser(user);
+            return Ok(user.UserId);
         }
 
-        [Route("{accountId}")]
+        [Route("")]
+        [HttpPost]
+        public IHttpActionResult AuthorizeUser(string email, string password)
+        {            
+            return Ok(Business.GetUser(email, password));
+        }
+
+        [Route("{userId}")]
         [HttpDelete]
-        public IHttpActionResult DeleteAccount(int accountId)
+        public IHttpActionResult DeleteAccount(int userId)
         {
+            Business.DeleteUser(userId);
             return Ok();
         }
 

@@ -120,6 +120,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Base\BaseApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,7 +153,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\JobPortal.Business\JobPortal.Business.csproj">
+      <Project>{94afba69-7486-4946-8b92-9c6d2a304b4e}</Project>
+      <Name>JobPortal.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobPortal.Models\JobPortal.Entities.csproj">
+      <Project>{98cd4cdf-ea41-4e77-92e0-6c73b883db5f}</Project>
+      <Name>JobPortal.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
