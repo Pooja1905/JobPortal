@@ -105,9 +105,9 @@
     <None Include="Scripts\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JobPortal\JobPortal.csproj">
+    <ProjectReference Include="..\JobPortal\JobPortal.Web.csproj">
       <Project>{CF40902F-5240-4429-8ABD-1D1554DBECC2}</Project>
-      <Name>JobPortal</Name>
+      <Name>JobPortal.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
