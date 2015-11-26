@@ -1,11 +1,11 @@
-﻿using JobPortal.Models;
+﻿using JobPortal.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace JobPortal.Entities
+namespace JobPortal.Data
 {
     public class UserContext : DbContext
     {

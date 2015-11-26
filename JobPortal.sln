@@ -5,16 +5,23 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Web", "JobPortal\JobPortal.Web.csproj", "{CF40902F-5240-4429-8ABD-1D1554DBECC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Models", "JobPortal.Models\JobPortal.Models.csproj", "{98CD4CDF-EA41-4E77-92E0-6C73B883DB5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Entities", "JobPortal.Models\JobPortal.Entities.csproj", "{98CD4CDF-EA41-4E77-92E0-6C73B883DB5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Entities", "JobPortal.Entities\JobPortal.Entities.csproj", "{B9665A68-0E5E-494B-B93A-808DFA93D6AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Data", "JobPortal.Entities\JobPortal.Data.csproj", "{B9665A68-0E5E-494B-B93A-808DFA93D6AC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{98CD4CDF-EA41-4E77-92E0-6C73B883DB5F} = {98CD4CDF-EA41-4E77-92E0-6C73B883DB5F}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Business", "JobPortal.Business\JobPortal.Business.csproj", "{94AFBA69-7486-4946-8B92-9C6D2A304B4E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9665A68-0E5E-494B-B93A-808DFA93D6AC} = {B9665A68-0E5E-494B-B93A-808DFA93D6AC}
+		{98CD4CDF-EA41-4E77-92E0-6C73B883DB5F} = {98CD4CDF-EA41-4E77-92E0-6C73B883DB5F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobPortal.Api", "JobPortal.Api\JobPortal.Api.csproj", "{7DE62909-6798-4BE6-95E0-07A9979C7C43}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94AFBA69-7486-4946-8B92-9C6D2A304B4E} = {94AFBA69-7486-4946-8B92-9C6D2A304B4E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

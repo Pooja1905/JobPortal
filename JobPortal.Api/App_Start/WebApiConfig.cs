@@ -19,6 +19,12 @@ namespace JobPortal.Api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            #region Explanation for the next line of code
+            //The following line of code makes sure you get json on most queries, but you can get xml when you send text/xml
+            //Source : http://stackoverflow.com/questions/9847564/how-do-i-get-asp-net-web-api-to-return-json-instead-of-xml-using-chrome
+            #endregion
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
         }
     }
 }

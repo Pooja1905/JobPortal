@@ -20,21 +20,12 @@ namespace JobPortal.Api.Controllers
 
             }
         }
-        
-        [Route("")]
-        [HttpGet]
-        public IHttpActionResult GetAccounts()
-        {            
-            return Ok(Accounts);
-        }
 
-        [Route("{accountId}")]
+        [Route("{userId}")]
         [HttpGet]
-        public IHttpActionResult GetAccount(int accountId)
+        public IHttpActionResult GetUser(int userId)
         {
-            var account = Accounts.Where(x => x == accountId);
-            if (account == null) return NotFound();
-            return Ok(account);
+            return null;
         }
 
         [Route("")]
