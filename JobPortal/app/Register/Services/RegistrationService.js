@@ -8,10 +8,10 @@
         var register = function (credentials) {
             $http({
                 method: 'POST',
-                url: 'JobPortal.Api/api/HomeApi/RegisterUser',
+                url: 'http://localhost/api/account/AddUser',
                 data: credentials
             }).then(function (response) {
-                isRegistered = response.data.EmailAddress ? true : false;
+                isRegistered = response.data>=0 ? true : false;
                 return isRegistered;
             });
         };

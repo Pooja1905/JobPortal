@@ -13,6 +13,9 @@
             <div class="validation-error" ng-show="registrationForm.emailAddress.$invalid && registrationForm.$submitted">
                 Please enter a valid email
             </div>
+            <div class="validation-error" ng-show="(registrationForm.emailAddress.$invalid && registrationForm.$submitted) || vm.isRegistered==false">
+                This email address is already registered.
+            </div>
         </div>
         <div>
             <input type="password" name="password" class="form-control" ng-model="vm.credentials.password" style="display:inline-block; width:40%;margin-bottom:5px;" id="password" placeholder="Password" required />

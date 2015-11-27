@@ -12,7 +12,9 @@
             var res = registrationService.registerUser(vm.credentials);
             if (res) {
                 $location.path('/Dashboard');
-            }            
+            } else {
+                vm.isRegistered = false;
+            }
         }
     }
 

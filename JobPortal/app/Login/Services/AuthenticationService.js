@@ -8,10 +8,10 @@
         var isAuthorized = function(credentials) {
             return $http({
                 method: 'POST',
-                url: 'api/HomeApi/AuthorizeUser',
+                url: 'http://localhost/api/account/AuthorizeUser',
                 data: credentials
             }).then(function (response) {
-                isLoginAuthorized = response.data.EmailAddress ? true : false;
+                isLoginAuthorized = response.data>=0 ? true : false;
                 return isLoginAuthorized;
             });
         };

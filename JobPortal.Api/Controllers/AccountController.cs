@@ -20,7 +20,7 @@ namespace JobPortal.Api.Controllers
             return Ok(Business.GetUser(userId));
         }
 
-        [Route("")]
+        [Route("AddUser")]
         [HttpPost]
         public IHttpActionResult AddAccount(User user)
         {
@@ -36,11 +36,20 @@ namespace JobPortal.Api.Controllers
             return Ok(user.UserId);
         }
 
-        [Route("")]
+        [Route("AuthorizeUser")]
         [HttpPost]
-        public IHttpActionResult AuthorizeUser(string email, string password)
-        {            
-            return Ok(Business.GetUser(email, password));
+        public IHttpActionResult AuthorizeUser([FromBody]LoginModel model)
+        {
+            int userId = -1;
+            try
+            {
+                userId = Business.GetUser(model.EmailAddress, model.Password);
+            }
+            catch(Exception ex)
+            {
+                return  Ok(-1);
+            }
+            return Ok(userId);
         }
 
         [Route("{userId}")]
@@ -50,7 +59,11 @@ namespace JobPortal.Api.Controllers
             Business.DeleteUser(userId);
             return Ok();
         }
+    }
 
-
+    public class LoginModel
+    {
+        public String EmailAddress { get; set; }
+        public String Password { get; set; }
     }
 }

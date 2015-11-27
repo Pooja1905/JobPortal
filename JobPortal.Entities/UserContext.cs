@@ -10,7 +10,7 @@ namespace JobPortal.Data
     public class UserContext : DbContext
     {
         public UserContext()
-            : base("name=JobPortalConnectionString")
+            : base("JobPortalConnectionString")
         {
 
         }
