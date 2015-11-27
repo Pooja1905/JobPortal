@@ -9,11 +9,11 @@ namespace JobPortal.Business.Base
 {
     public abstract class BusinessBase : IDisposable
     {
-        protected UserContext Context { get; set; }
+        protected JobPortalContext Context { get; set; }
 
         public BusinessBase()
         {
-            this.Context = new UserContext();
+            this.Context = new JobPortalContext();
         }
 
         public void Dispose()

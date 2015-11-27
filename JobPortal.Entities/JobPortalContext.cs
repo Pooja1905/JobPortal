@@ -7,9 +7,9 @@ using System.Web;
 
 namespace JobPortal.Data
 {
-    public class UserContext : DbContext
+    public class JobPortalContext : DbContext
     {
-        public UserContext()
+        public JobPortalContext()
             : base("JobPortalConnectionString")
         {
 
@@ -19,7 +19,7 @@ namespace JobPortal.Data
        
     }
 
-    public class UserInitializer : DropCreateDatabaseIfModelChanges<UserContext>
+    public class UserInitializer : DropCreateDatabaseIfModelChanges<JobPortalContext>
     {
 
     }
